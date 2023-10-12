@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int sumOfDigits(int num) {
+    int sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    int num1, num2, num3;
+    cout << "Lotfan 3 adad vared konid : ";
+    cin >> num1 >> num2 >> num3;
+    for (int i = num1; i <= num2 ; i++)
+    if (sumOfDigits(i) == num3) {
+        cout << i << endl;
+    }
+    return 0;
+}
