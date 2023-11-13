@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            double x = convert.To Double(console.Readline());
+            double y = convert.To Double(console.Readline());
+            calc (x,y);
+        }
+        void calc (double x , double y)
+        {
+            double Result = Math.sqrt(Math.ABS(x)) + Math.pow(y,2);
+            console.writeline(Result);
+        }
+    }
+}
