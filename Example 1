@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            double L = convert.To Double (console.Readline());
+            double W = convert.To Double (console.Readline());
+            double H = convert.To Double (console.Readline());
+            double Result = calc (L,W,H)
+            console.writeline(Result);
+        }
+        double calc(double num1, double num2, double num3);
+        {
+        double vol = num1 * num2 * num3;
+        return vol;
+        }
+    }
+}
