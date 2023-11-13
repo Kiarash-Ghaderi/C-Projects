@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int x = convert.To Int32 (console.Readline());
+            if (x % 2 == 0)
+            {even (x);}
+            else 
+            {odd (x);}
+        }
+        void even (int x)
+        {
+            int sum = 0;
+            int mul = 1;
+            {
+                for(int i = 2 , i<=x , i+2)
+                {
+                    sum += i;
+                    mul *= i;
+                }
+            }
+            console.writeline(sum);
+            console.writeline(mul);
+        }
+    }
+}
