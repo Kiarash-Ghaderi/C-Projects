@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            double x = convert.To Double (console.Readline());
+            double Result = calc(x);
+            console.writeline(Result);
+        }
+        double calc(double x)
+        {
+            double y = MAth.pow(x,2) + 4*x-5;
+            return y;
+        }
+    }
+}
