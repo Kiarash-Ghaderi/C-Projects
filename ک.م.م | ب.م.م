@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter two numbers:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        int lcmResult = CalculateLCM(num1, num2);
+        int gcdResult = CalculateGCD(num1, num2);
+
+        Console.WriteLine($"LCM of {num1} and {num2} is: {lcmResult}");
+        Console.WriteLine($"GCD of {num1} and {num2} is: {gcdResult}");
+
+        Console.ReadLine();
+    }
+
+    static int CalculateLCM(int a, int b)
+    {
+        int max = Math.Max(a, b);
+        int lcm = max;
+
+        while (true)
+        {
+            if (lcm % a == 0 && lcm % b == 0)
+                break;
+
+            lcm += max;
+        }
+
+        return lcm;
+    }
+
+    static int CalculateGCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return a;
+    }
+}
