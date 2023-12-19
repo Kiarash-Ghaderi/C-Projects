@@ -1,0 +1,73 @@
+using System;
+namespace pog
+{
+    class test
+    {
+        public static void Main()
+            {
+              Teacher th = neew Teacher("123", "ali", "ahmadi", 40, 40000);
+              double pog = th.Payment();
+              Console.WriteLine(pog);
+            }
+    }
+}
+
+/////////
+
+using System;
+namespace tamrin1
+{
+    public class Teacher
+    {
+        private string id;
+        private string name;
+        private string lastname;
+        private int hour;
+        private int paperhour;
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Lastname
+        {
+            get { return lastname; }
+            set { lastname = value; }
+        }
+        public int Hour
+        {
+            get { return hour; }
+            set { hour = value; }
+        }
+        public int Paperhour
+        {
+            get { return paperhour; }
+            set
+            {
+                if (value > 0)
+                {
+                    paperhour = value;
+                }
+            }
+        }
+        public Teacher() { }
+        public Teacher(string Id, string Name, string Lastname, int Hour, int Paperhour)
+        {
+            id = Id;
+            name = Name;
+            lastname = Lastname;
+            hour = Hour;
+            paperhour = Paperhour;
+        }
+        private double Payment()
+        {
+            return hour * paperhour;
+        }
+    }
+
+}
